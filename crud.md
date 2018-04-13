@@ -1,4 +1,4 @@
-CREATE -- POST -- Make New
+REATE -- POST -- Make New
 RETRIEVE -- GET -- List / Search
 UPDATE -- PUT/PATCH -- Edit
 DELETE -- DELETE -- Delete

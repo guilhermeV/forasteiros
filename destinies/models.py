@@ -9,7 +9,7 @@ class DestinyManager(models.Manager):
         return super(DestinyManager, self).filter(publish__lte=timezone.now())
 
 class Destiny(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     name = models.CharField(max_length=120)
     address = models.CharField(max_length=120)
     details = models.TextField()

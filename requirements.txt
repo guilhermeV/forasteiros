@@ -1,0 +1,5 @@
+django-crispy-forms
+django-pagedown
+djangorestframework==3.8.2
+djangorestframework-jwt
+markdown==2.1.0

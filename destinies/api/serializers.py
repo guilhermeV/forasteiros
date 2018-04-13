@@ -6,8 +6,8 @@ from rest_framework import serializers
 
 class DestinyListSerializer(ModelSerializer):
     #user = UserDetailSerializer(read_only=True) pra list e esse
-    user = serializers.PrimaryKeyRelatedField(many=False, queryset=User.objects.all())
     class Meta:
+        user = serializers.PrimaryKeyRelatedField(many=False, queryset=User.objects.all())
         model = Destiny
         fields = [
             'user',

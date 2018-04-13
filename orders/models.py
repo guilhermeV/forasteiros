@@ -10,7 +10,7 @@ class OrderManager(models.Manager):
         return super(OrderManager, self).filter(publish__lte=timezone.now())
 
 class Order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     payment_form = models.CharField(max_length=120)
     status = models.CharField(max_length=120)

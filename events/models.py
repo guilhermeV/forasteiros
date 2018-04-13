@@ -11,7 +11,7 @@ class EventManager(models.Manager):
         return super(EventManager, self).filter(publish__lte=timezone.now())
 
 class Event(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=120)
     destiny = models.ForeignKey(Destiny, on_delete=models.CASCADE)
     initial_date = models.DateField(auto_now=False, auto_now_add=False)

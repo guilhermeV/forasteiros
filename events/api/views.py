@@ -66,9 +66,9 @@ class EventDeleteAPIView(DestroyAPIView):
     permission_classes = [AllowAny]
     
 def search_event():
-    print 'wtf'
+    print ('wtf')
     e = events = Event.objects.filter(title='titl')
-    print e
+    print (e)
     return e
     #e = events = Event.objects.filter(title='teste')
 

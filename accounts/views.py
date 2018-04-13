@@ -14,7 +14,7 @@ def login_view(request):
         login(request, user)
         if next:
             return redirect(next)
-        return redirect("/")
+        return redirect("/posts/")
     return render(request, "form.html", {"form":form, "title": title})
 
 
@@ -31,7 +31,7 @@ def register_view(request):
         login(request, new_user)
         if next:
             return redirect(next)
-        return redirect("/")
+        return redirect("/posts/")
 
     context = {
         "form": form,

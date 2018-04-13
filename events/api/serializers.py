@@ -10,6 +10,7 @@ class EventListSerializer(ModelSerializer):
         model = Event
         fields = [
             'user',
+            'destiny',
             'title',
             'user',
             'initial_date',
@@ -36,7 +37,6 @@ class EventCreateUpdateSerializer(ModelSerializer):
         ]
         
     def create(self, instance):
-        print self.context['request'].user.__dict__
         return Event.objects.create(**instance)
         
         
